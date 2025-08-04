@@ -439,6 +439,9 @@ local function set_highlights()
 		["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
 		["@lsp.typemod.variable.injected"] = { link = "@variable" },
 
+		-- Filetype specific
+		["@lsp.type.class.python"] = { fg = palette.text, bold = true, italic = false },
+
 		--- Plugins
 		-- romgrk/barbar.nvim
 		BufferCurrent = { fg = palette.text, bg = palette.overlay },
@@ -930,6 +933,11 @@ local function set_highlights()
 		IlluminatedWordText = { link = "LspReferenceText" },
 		IlluminatedWordWrite = { link = "LspReferenceWrite" },
 
+		-- obsidian-nvim/obsidian.nvim
+		ObsidianBullet = { fg = palette.muted },
+		ObsidianRefText = { underline = true, fg = palette.iris },
+		ObsidianDone = { bold = styles.bold, fg = palette.foam },
+
 		-- HiPhish/rainbow-delimiters.nvim
 		RainbowDelimiterBlue = { fg = palette.pine },
 		RainbowDelimiterCyan = { fg = palette.foam },
@@ -984,7 +992,8 @@ local function set_highlights()
 		AvanteReversedThirdTitle = { fg = palette.iris },
 
 		-- Saghen/blink.cmp
-		BlinkCmpDoc = { fg = palette.text },
+		BlinkCmpDoc = { bg = palette.highlight_low },
+		BlinkCmpDocSeparator = { bg = palette.highlight_low },
 		BlinkCmpDocBorder = { fg = palette.highlight_high },
 		BlinkCmpGhostText = { fg = palette.muted },
 
@@ -1054,6 +1063,9 @@ local function set_highlights()
 		Normal = { fg = palette.text, bg = "NONE" },
 		NormalNC = { fg = palette.text, bg = config.options.dim_inactive_windows and palette._nc or "NONE" },
 		Pmenu = { fg = palette.subtle, bg = "NONE" },
+		BlinkCmpMenu = { fg = palette.subtle, bg = "NONE" },
+		BlinkCmpDoc = { bg = "NONE" },
+		BlinkCmpDocSeparator = { bg = "NONE" },
 		PmenuKind = { fg = palette.foam, bg = "NONE" },
 		SignColumn = { fg = palette.text, bg = "NONE" },
 		StatusLine = { fg = palette.subtle, bg = "NONE" },

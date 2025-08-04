@@ -1,43 +1,62 @@
 local options = require("geza.config").options
+
+-- Default colors {{{
+-- Colors which define Nvim's default color scheme:
+-- ----------------------------Background -----------------------------|
+-- --------------------|------------|------------------|-------------|
+--       Color       |    HEX     |    Color         |     HEX     |
+-----------------------|------------|------------------|-------------|
+--   NvimDarkBlue    |  #004C63   |  NvimLightBlue   |   #A6DBFF   |
+--   NvimDarkCyan    |  #007373   |  NvimLightCyan   |   #8CF8F7   |
+--   NvimDarkGreen   |  #005523   |  NvimLightGreen  |   #B4F6C0   |
+--   NvimDarkGrey1   |  #07080D   |  NvimLightGrey1  |   #EEF1F8   |
+--   NvimDarkGrey2   |  #14161B   |  NvimLightGrey2  |   #E0E2EA   |
+--   NvimDarkGrey3   |  #2C2E33   |  NvimLightGrey3  |   #C4C6CD   |
+--   NvimDarkGrey4   |  #4F5258   |  NvimLightGrey4  |   #9B9EA4   |
+--   NvimDarkMagenta |  #470045   |  NvimLightMagenta|   #FFCAFF   |
+--   NvimDarkRed     |  #590008   |  NvimLightRed    |   #FFC0B9   |
+--   NvimDarkYellow  |  #6B5300   |  NvimLightYellow |   #FCE094   |
+----------------------------------------------------------------------}}}
 local variants = {
 	dark = {
 		base = "#14161B",
-		text = "#e0e2ea",
-		iris = "#c4c6cd",
-		foam = "#b4f6c0",
-		pine = "#8cf8f7",
-		subtle = "#9b9ea4",
+		text = "#E0E2EA",
+		iris = "#C4C6CD",
+		foam = "#B4F6C0",
+		pine = "#8CF8F7",
+		subtle = "#9B9EA4",
 		surface = "#07080D",
-		rose = "#ffc0b9",
-		gold = "#fce094",
-		love = "#eb6f92",
-		_nc = "#16141f",
-		overlay = "#26233a",
-		muted = "#6e6a86",
-		leaf = "#95b1ac",
-		highlight_low = "#16141f",
-		highlight_med = "#403d52",
-		highlight_high = "#524f67",
+		rose = "#FFC0B9",
+		gold = "#FCE094",
+		love = "#EB6F92",
+		_nc = "#16141F",
+		overlay = "#26233A",
+		muted = "#6E6A86",
+		leaf = "#95B1AC",
+		highlight_low = "#16141F",
+		highlight_med = "#403D52",
+		highlight_high = "#524F67",
 		none = "NONE",
 	},
 	light = {
-		base = "#e0e2ea",
+		base = "#FFFFFF",
 		text = "#14161B",
-		iris = "#9b9ea4",
+		iris = "#9B9EA4",
 		foam = "#470045",
 		pine = "#007373",
-		subtle = "#9c99a9",
-		surface = "#eef1f8",
+		subtle = "#524F67",
+		surface = "#EEF1F8",
 		rose = "#590008",
-		gold = "#6b5300",
-		love = "#b4637a",
-		_nc = "#f8f0e7",
-		overlay = "#f2e9e1",
-		muted = "#9893a5",
-		leaf = "#6d8f89",
-		highlight_low = "#f4ede8",
-		highlight_med = "#dfdad9",
-		highlight_high = "#cecacd",
+		gold = "#6B5300",
+		love = "#470045",
+		_nc = "#EEF1F8",
+		-- overlay = "#F2E9E1",
+		overlay = "#EEF1F8",
+		muted = "#9893A5",
+		leaf = "#007373",
+		highlight_low = "#EEF1F8",
+		highlight_med = "#E0E2EA",
+		highlight_high = "#C4C6CD",
 		none = "NONE",
 	},
 }

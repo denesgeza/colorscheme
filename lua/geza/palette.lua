@@ -3,9 +3,9 @@ local options = require("geza.config").options
 -- Default colors {{{
 -- Colors which define Nvim's default color scheme:
 -- ----------------------------Background -----------------------------|
--- --------------------|------------|------------------|-------------|
+-- ------------------|------------|------------------|-------------|
 --       Color       |    HEX     |    Color         |     HEX     |
------------------------|------------|------------------|-------------|
+---------------------|------------|------------------|-------------|
 --   NvimDarkBlue    |  #004C63   |  NvimLightBlue   |   #A6DBFF   |
 --   NvimDarkCyan    |  #007373   |  NvimLightCyan   |   #8CF8F7   |
 --   NvimDarkGreen   |  #005523   |  NvimLightGreen  |   #B4F6C0   |
@@ -42,7 +42,8 @@ local variants = {
 		base = "#FFFFFF",
 		text = "#14161B",
 		iris = "#9B9EA4",
-		foam = "#470045",
+		foam = "#005523",
+		-- foam = "#470045",
 		pine = "#007373",
 		subtle = "#524F67",
 		surface = "#EEF1F8",

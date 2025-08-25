@@ -108,7 +108,7 @@ local function set_highlights()
 		IncSearch = { link = "CurSearch" },
 		LineNr = { fg = palette.muted },
 		MatchParen = { fg = palette.pine, bg = palette.pine, blend = 25 },
-		ModeMsg = { fg = palette.subtle },
+		ModeMsg = { fg = palette.pine },
 		MoreMsg = { fg = palette.iris },
 		NonText = { fg = palette.muted },
 		Normal = { fg = palette.text, bg = palette.base },
@@ -183,11 +183,16 @@ local function set_highlights()
 		DiagnosticUnderlineInfo = { sp = groups.info, undercurl = true },
 		DiagnosticUnderlineOk = { sp = groups.ok, undercurl = true },
 		DiagnosticUnderlineWarn = { sp = groups.warn, undercurl = true },
-		DiagnosticVirtualTextError = { fg = groups.error, bg = groups.error, blend = 10 },
-		DiagnosticVirtualTextHint = { fg = groups.hint, bg = groups.hint, blend = 10 },
-		DiagnosticVirtualTextInfo = { fg = groups.info, bg = groups.info, blend = 10 },
+		DiagnosticVirtualTextError = { fg = groups.error, bg = groups.error, blend = 10, italic = styles.italic },
+		DiagnosticVirtualTextHint = { fg = groups.hint, bg = groups.hint, blend = 10, italic = styles.italic },
+		DiagnosticVirtualTextInfo = { fg = groups.info, bg = groups.info, blend = 10, italic = styles.italic },
 		DiagnosticVirtualTextOk = { fg = groups.ok, bg = groups.ok, blend = 10 },
-		DiagnosticVirtualTextWarn = { fg = groups.warn, bg = groups.warn, blend = 10 },
+		DiagnosticVirtualTextWarn = { fg = groups.warn, bg = groups.warn, blend = 10, italic = styles.italic },
+		DiagnosticVirtualLinesError = { fg = groups.error, bg = groups.error, blend = 10, italic = styles.italic },
+		DiagnosticVirtualLinesHint = { fg = groups.hint, bg = groups.hint, blend = 10, italic = styles.italic },
+		DiagnosticVirtualLinesInfo = { fg = groups.info, bg = groups.info, blend = 10, italic = styles.italic },
+		DiagnosticVirtualLinesOk = { fg = groups.ok },
+		DiagnosticVirtualLinesWarn = { fg = groups.warn, bg = groups.warn, blend = 10, italic = styles.italic },
 
 		Boolean = { fg = palette.rose },
 		Character = { fg = palette.gold },
@@ -441,6 +446,7 @@ local function set_highlights()
 
 		-- Filetype specific
 		["@lsp.type.class.python"] = { fg = palette.text, bold = true, italic = false },
+		-- ["@lsp.type.string.python"] = { link = "Comment" },
 
 		--- Plugins
 		-- romgrk/barbar.nvim
@@ -1050,11 +1056,16 @@ local function set_highlights()
 		SneakScope = { link = "IncSearch" },
 	}
 	local transparency_highlights = {
-		DiagnosticVirtualTextError = { fg = groups.error },
-		DiagnosticVirtualTextHint = { fg = groups.hint },
-		DiagnosticVirtualTextInfo = { fg = groups.info },
+		DiagnosticVirtualTextError = { fg = groups.error, italic = styles.italic },
+		DiagnosticVirtualTextHint = { fg = groups.hint, italic = styles.italic },
+		DiagnosticVirtualTextInfo = { fg = groups.info, italic = styles.italic },
 		DiagnosticVirtualTextOk = { fg = groups.ok },
-		DiagnosticVirtualTextWarn = { fg = groups.warn },
+		DiagnosticVirtualTextWarn = { fg = groups.warn, italic = styles.italic },
+		DiagnosticVirtualLinesError = { fg = groups.error, italic = styles.italic },
+		DiagnosticVirtualLinesHint = { fg = groups.hint, italic = styles.italic },
+		DiagnosticVirtualLinesInfo = { fg = groups.info, italic = styles.italic },
+		DiagnosticVirtualLinesOk = { fg = groups.ok },
+		DiagnosticVirtualLinesWarn = { fg = groups.warn, italic = styles.italic },
 
 		FloatBorder = { fg = palette.muted, bg = "NONE" },
 		FloatTitle = { fg = palette.foam, bg = "NONE", bold = styles.bold },

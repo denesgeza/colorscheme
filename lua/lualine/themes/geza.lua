@@ -10,8 +10,7 @@ return {
 	normal = {
 		-- a = { bg = p.rose, fg = p.base, gui = "bold" },
 		a = { bg = p.leaf, fg = p.base, gui = "bold" },
-		-- b = { bg = p.overlay, fg = p.rose },
-		b = { bg = p.highlight_med, fg = p.leaf },
+		b = { bg = p.overlay, fg = p.rose },
 		c = { bg = bg_base, fg = p.text },
 	},
 	insert = {

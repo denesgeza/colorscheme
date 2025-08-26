@@ -285,7 +285,7 @@ local function set_highlights()
 
 		--- Treesitter
 		--- |:help treesitter-highlight-groups|
-		["@variable"] = { fg = palette.text, italic = styles.italic },
+		["@variable"] = { fg = palette.text },
 		["@variable.builtin"] = { fg = palette.love, italic = styles.italic, bold = styles.bold },
 		["@variable.parameter"] = { link = "@parameter" },
 		["@variable.parameter.builtin"] = { fg = palette.iris, italic = styles.italic, bold = styles.bold },
@@ -317,7 +317,7 @@ local function set_highlights()
 		["@float"] = { link = "Number" },
 
 		["@type"] = { fg = palette.foam },
-		["@type.builtin"] = { fg = palette.foam, bold = styles.bold },
+		["@type.builtin"] = { fg = palette.iris },
 		-- ["@type.definition"] = {},
 
 		["@attribute"] = { fg = palette.iris },
@@ -330,7 +330,10 @@ local function set_highlights()
 		["@function.macro"] = { link = "Function" },
 
 		["@function.method"] = { fg = palette.rose },
-		["@function.method.call"] = { fg = palette.iris },
+		["@function.method.call"] = { link = "@function.method" },
+		["@function.constructor"] = { fg = palette.rose, bold = styles.bold },
+
+		["@method.call"] = { link = "@function.method" },
 
 		["@constructor"] = { fg = palette.foam },
 		["@operator"] = { link = "Operator" },
@@ -346,8 +349,27 @@ local function set_highlights()
 		["@keyword.debug"] = { fg = palette.rose },
 		["@keyword.exception"] = { fg = palette.pine },
 
-		["@keyword.conditional"] = { fg = palette.pine },
-		["@keyword.conditional.ternary"] = { fg = palette.pine },
+		-- ["@keyword.conditional"] = { fg = palette.pine },
+		["@keyword.conditional"] = { fg = palette.text, bold = styles.bold },
+		["@keyword.conditional.ternary"] = { fg = palette.pine, bold = styles.bold },
+
+		["@keyword.type"] = { fg = palette.foam },
+		["@keyword.type.class"] = { fg = palette.foam, bold = styles.bold },
+		["@keyword.type.interface"] = { fg = palette.foam, bold = styles.bold },
+
+		["@keyword.constant"] = { fg = palette.gold },
+		["@keyword.constant.builtin"] = { fg = palette.gold, bold = styles.bold },
+
+		["@keyword.special"] = { fg = palette.iris, bold = styles.bold },
+
+		["@preproc"] = { link = "PreProc" },
+		["@preproc.class"] = { link = "PreProc" },
+		["@preproc.directive"] = { link = "PreProc" },
+		["@preproc.ifdef"] = { link = "PreProc" },
+		["@preproc.include"] = { link = "PreProc" },
+		["@preproc.macro"] = { link = "PreProc" },
+		["@preproc.macro.definition"] = { link = "PreProc" },
+		["@preproc.macro.file"] = { link = "PreProc" },
 
 		["@keyword.directive"] = { fg = palette.iris },
 		["@keyword.directive.define"] = { fg = palette.iris },
@@ -446,6 +468,7 @@ local function set_highlights()
 
 		-- Filetype specific
 		["@lsp.type.class.python"] = { fg = palette.text, bold = true, italic = false },
+		["@lsp.mod.builtin.python"] = { link = "@type.builtin" },
 		-- ["@lsp.type.string.python"] = { link = "Comment" },
 
 		--- Plugins

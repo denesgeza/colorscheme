@@ -1,4 +1,7 @@
 # Changelog
+## 0.1.3 - 2025-08-26
+- light theme updates
+
 ## 0.1.2 - 2025-08-25
 - added DiagnosticVirtualText-xxx highlights
 - fix lualine b section bg
